@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.coll.OnlineCollaborate.Dao.IBlogCommentsDao"/>
+<fullyQualifiedTypeName name="com.coll.OnlineCollaborate.Dao.IBlogDao"/>
+<fullyQualifiedTypeName name="com.coll.OnlineCollaborate.Dao.IUserDao"/>
+<fullyQualifiedTypeName name="com.coll.OnlineCollaborate.service.IBlogCommentsService"/>
+</qualifiedTypeNameHistroy>

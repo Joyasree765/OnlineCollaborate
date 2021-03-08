@@ -1,0 +1,110 @@
+<h3>Registration Here</h3>  
+<div class="row">  
+  <div class="col-sm-4"></div>  
+  <div class="col-sm-4" >  
+    <div [hidden]="submitted" style="width: 400px;">  
+      <form [formGroup]="registrationform"  (ngSubmit)="register(register)">  
+          <div class="form-group">  
+              <label for="firstName">First Name</label>  
+              <input type="text" class="form-control"  formControlName="firstName" data-toggle="tooltip"   
+                 data-placement="right" title="Enter First Name" >  
+              <div class="alert alert-danger" *ngIf = "(FirstName.touched) && (FirstName.invalid)"   
+                style="margin-top: 5px;">  
+                  <span *ngIf="FirstName.errors.required">First Name is Required</span>  
+                    <span *ngIf = "FirstName.errors.minlength">   
+                        MinLength Error   
+                    </span>                     
+                </div>  
+          </div>  
+    
+          <div class="form-group">  
+              <label for="lastName">Last Name</label>  
+              <input type="text" class="form-control" formControlName="lastName"   
+                data-toggle="tooltip" data-placement="right" title="Enter lastName">  
+                <div class="alert alert-danger" *ngIf = "(LastName.touched) && (LastName.invalid)"   
+                style="margin-top: 5px;">  
+                  <span *ngIf="LastName.errors.required">Last Name is Required</span>  
+                    <span *ngIf = "LastName.errors.minlength"> 
+                        MinLength Error   
+                           
+                    </span>                     
+                </div>  
+          </div>  
+    
+          <div class="form-group">  
+              <label for="username">Username</label>
+              <input type="text" class="form-control" formControlName="username"   
+              data-toggle="tooltip" data-placement="right" title="Enter username">  
+              <div class="alert alert-danger" *ngIf = "(Username.touched) && (Username.invalid)"   
+              style="margin-top: 5px;">  
+                <span *ngIf="Username.errors.required">Username is Required</span>  
+                  <span *ngIf = "Username.errors.minlength">   
+                    MinLength Error   
+                  </span>                     
+              </div>    
+
+          </div> 
+          <div class="form-group">  
+            <label for="password">Password</label>
+            <input type="text" class="form-control" formControlName="password"   
+            data-toggle="tooltip" data-placement="right" title="Enter password">  
+            <div class="alert alert-danger" *ngIf = "(password.touched) && (password.invalid)"   
+            style="margin-top: 5px;">  
+              <span *ngIf="Password.errors.required">Password is Required</span>  
+                <span *ngIf = "Password.errors.minlength">   
+                  MinLength Error   
+                </span>                     
+            </div>    
+        </div>
+        
+        <div class="form-group">  
+            <label for="confirm_password">Confirm_Password</label>
+            <input type="text" class="form-control" formControlName="confirm_password"   
+            data-toggle="tooltip" data-placement="right" title="Enter confirm_password">  
+            <div class="alert alert-danger" *ngIf = "(ConfirmPassword.touched) && (ConfirmPassword.invalid)"   
+            style="margin-top: 5px;">  
+              <span *ngIf="Confirm_Password.errors.required">Confirm_Password is Required</span>  
+                <span *ngIf = "Confirm_Password.errors.minlength">   
+                  MinLength Error   
+                </span>                     
+            </div>    
+
+        </div> 
+        <div class="form-group">  
+            <label for="email">Email</label>
+            <input type="text" class="form-control" formControlName="email"   
+            data-toggle="tooltip" data-placement="right" title="Enter email">  
+            <div class="alert alert-danger" *ngIf = "(Email.touched) && (Email.invalid)"   
+            style="margin-top: 5px;">  
+              <span *ngIf="Email.errors.required">Email is Required</span>  
+                <span *ngIf = "Email.errors.minlength">   
+                  Invaild Email Format   
+                </span>                     
+            </div>    
+
+        </div> 
+        <div class="form-group">  
+            <label for="role">Role</label>
+            <select class="form-control" formControlName="role" data-toggle="tooltip"   
+                      data-placement="right" title="Select User Role">  
+                    <option value="null">--User Role--</option>  
+                  <option value="Admin">Admin</option>  
+                  <option value="User">User</option>   
+                </select>  
+          </div>        
+    
+          <button type="submit" class="btn btn-success">Submit</button>  
+      </form>  
+  </div>  
+  </div>  
+  <div class="col-sm-4"></div>  
+</div>  
+<div class="row">  
+  <div class="col-sm-4"></div>  
+  <div class="col-sm-4">  
+      <div [hidden]="!submitted">  
+         <h4>Congtatulations! you have registered successFully!</h4>  
+      </div>        
+  </div>  
+</div>  
+

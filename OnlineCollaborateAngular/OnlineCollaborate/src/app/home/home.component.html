@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="navbar">
+        <div class="menu">
+            <h3 class="logo"><span>Online</span>Collaborate</h3>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="main">
+            <header>
+                <div class="overlay">
+                    <h2 class="title">Hello there..!!</h2>
+                    <p class="description">"click here to be part of<span style="color:brown; front-size:140%"><strong>Onlinr collaboration</strong></span>"</p>
+                    <div class="btn">
+                        <a mat-list-item routerLink="login-user" class="nav-link"(click)="logInUser()" class="btn">Login</a>/
+                        <a mat-list-item routerLink="register-user" class="nav-link"(click)="RegUser()"class="btn"Resgistration</a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="shadow one"></div>
+            <div class="shadow two"></div>
+    </div>
+</div>
+<div class="pagess">
+    <app-login-user></app-login-user>
+</div>
+<div class="pagess">
+    <app-register-user></app-register-user>
+</div>

@@ -1,0 +1,47 @@
+create database collaboration;
+
+use Collaboration;
+drop table User;
+create table User(
+UserId int not null auto_increment,
+firstName varchar(30),
+lastName varchar(30) ,
+username varchar(30),
+Password varchar(20),
+email varchar(30),
+role varchar(10),
+status varchar(10),
+isOnline varchar(5),
+enabled varchar(5),
+primary key(UserId)
+);
+drop table User;
+
+drop table Blog;
+create table Blog(
+blogId int not null auto_increment,
+blogTiTle varchar(255),
+blogContent varchar(200),
+blogPosted datetime,
+status varchar(10),
+noOfLikes int,
+noComments int,
+noOfViews int,
+userId int,
+username varchar(20),
+primary key(BlogId)
+);
+
+create table BlogComments(
+blogCommentId int not null auto_increment,
+userId int ,
+username varchar(20),
+userProfileId varchar(20),
+title varchar(30),
+noOfLikes int,
+blogcomment varchar(20),
+currentDate date,
+blogId int,
+primary key(blogCommentId)
+);
+

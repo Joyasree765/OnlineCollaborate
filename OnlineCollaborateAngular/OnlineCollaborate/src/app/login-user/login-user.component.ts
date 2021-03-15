@@ -4,8 +4,7 @@ import { User } from '../user';
 import { Observable, Subject } from 'rxjs';
 import { Validators, FormControl, FormGroup, FormBuilder } from '@angular/forms';
 import { DataTablesModule } from 'angular-datatables';
-
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-user',
@@ -13,13 +12,15 @@ import { DataTablesModule } from 'angular-datatables';
   styleUrls: ['./login-user.component.css']
 })
 export class LoginUserComponent implements OnInit {
+
   user : User=new User();
   currentUser : any;  
-  
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit(): void {
+    
   }
+
   loginform=new FormGroup({
     username:new FormControl('',[Validators.required]),
     password:new FormControl('',[Validators.required])
@@ -27,15 +28,22 @@ export class LoginUserComponent implements OnInit {
 
   validateUser() {
     this.user=new User();
-    this.user.username=this.Username.value;
-    this.user.password=this.Password.value;
-
+    this.user.username=this.Username?.value;
+    this.user.password=this.Password?.value;
+    
     this.userService.checkUser(this.user).subscribe (
       data => {
         console.log(data);
         if(data!=null) {
           this.currentUser=data;
-          console.log(this.currentUser.firstName);
+         if(this.currentUser.role==="Admin"){
+    
+           this.router.navigateByUrl("/nav/" +'${this.currentUser.userId}');
+         }
+         else{
+          
+          this.router.navigateByUrl("/nav-user/"+'${this.currentUser.userId}');
+         }
         }
         else {
           console.log("Object Empty");
@@ -52,5 +60,9 @@ export class LoginUserComponent implements OnInit {
   get Password() {
     return this.loginform.get ('password');
   }
-
+  RegUser(){
+    $(".pagess").css("visibility","visible");
+    $(".card").css("visibility","hidden");
   }
+ 
+}

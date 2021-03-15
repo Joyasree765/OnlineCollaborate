@@ -1,0 +1,13 @@
+.panel{
+    position: relative;
+    left:40px;
+    background-color: rgb(89, 0, 255);
+}
+td{
+    border-right: solid 0.4px #0a0a0a;
+    border-bottom: solid 0.4px black;
+}
+th{
+    border-top:solid o.4px black;
+    border-buttom:solid o.4px black;
+}

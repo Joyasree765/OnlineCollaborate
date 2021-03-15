@@ -146,6 +146,21 @@ public class UserDaoImpl implements IUserDao {
 			return false;
 		}
 	}
+
+	@Override
+	public boolean logoutUser(int userId) {
+		try {
+			User user=getUserById(userId);
+			user.setIsOnline("flase");
+			sessionFactory.getCurrentSession().update(user);
+			return true;
+		}
+		catch(Exception ex) {
+			ex.printStackTrace();
+			return false;
+		}
+		
+	}
 	
 
 }

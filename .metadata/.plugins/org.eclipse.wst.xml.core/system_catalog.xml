@@ -202,4 +202,5 @@
   <system systemId="http://www.w3.org/2001/xml.xsd" uri="jar:file:/F:/AllWorkspaces/Java_Workspace/eclipse/plugins/org.eclipse.xsd_2.16.0.v20181220-0848.jar!/cache/www.w3.org/2001/xml.xsd"/>
   <uri name="http://www.w3.org/2001/XMLSchema" uri="jar:file:/F:/AllWorkspaces/Java_Workspace/eclipse/plugins/org.eclipse.xsd_2.16.0.v20181220-0848.jar!/cache/www.w3.org/2001/XMLSchema.xsd"/>
   <uri id="org.w3c.xinclude" name="http://www.w3.org/2001/XInclude" uri="jar:file:/F:/AllWorkspaces/Java_Workspace/eclipse/plugins/org.eclipse.wst.xsl.core_1.2.0.v201901071922.jar!/xslt-schemas/xinclude.xsd"/>
+  <uri name="http://appengine.google.com/ns/1.0" uri="jar:file:/F:/AllWorkspaces/Java_Workspace/eclipse/plugins/com.google.cloud.tools.eclipse.appengine.validation_0.1.0.201912032243.jar!/xsd/appengine-web.xsd"/>
 </catalog>

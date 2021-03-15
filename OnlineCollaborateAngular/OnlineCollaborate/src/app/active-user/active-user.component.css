@@ -1,0 +1,16 @@
+.panel {
+    position: relative;
+    left: 40px;
+    background-color: rgb(76, 0, 255);
+  }
+  
+  td {
+    border-right: solid 0.3px #0a0a0a;
+    border-bottom: solid 0.3px black;
+  }
+  
+  th {
+    border-top: solid 0.5px black;
+    border-bottom: solid 0.5px black;
+  }
+  
